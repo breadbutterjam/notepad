@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Notepad</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <script type="text/javascript" src="jQuery.js"></script> -->
+	<script type="text/javascript" src="notepad.js"></script>
+	<style>
+		body{
+			margin: 0px;
+		}
+
+		.darkMode{
+			background-color:black;
+		}
+		.counts{
+			/* text-align: center; */
+			/* padding-left: 20px; */
+			font-family: monospace;
+			font-size: 1.27em;
+			position: relative;
+			float: left;
+		}
+
+		.buttonHolder{
+			display: flex;
+			float: right;
+			/* flex-direction: row-reverse; */
+		}
+
+		.darkMode.notepadMain{
+			color: white;
+		}
+		
+        .notepadMain{
+			border: 1px solid lightgray;
+			/* border: 1px solid black; */
+			min-height: 20vh;
+			height: fit-content;
+			/* width: 80vw; */
+			margin: auto;
+			font-family: sans-serif;
+			padding: 10px;
+			margin-top: 25px;
+			/* background-color: bisque; */
+			border-radius: 4px;
+		}
+
+		.notepadMain:focus{
+			border: 1px solid lightgray;
+		}
+		.mainContainer{
+			/* border: 1px solid red; */
+			border: 1px solid transparent;
+			/* background-color: lightgray; */
+			margin: 20px;
+		}
+		.header_buttons{
+			padding-left: 10px;
+			text-decoration: underline;
+			/* padding-right: 10px; */
+		}
+		.CharCount
+		{
+			padding-right: 8px;
+		}
+		/* .header_buttons:hover{
+			color: blue;
+		}
+ */
+		.headerHolder
+		{color: lightgrey;}
+    </style>
+</head>
+<body onload="onBodyLoad()" class="modeChanger">
+<!-- <body> -->
+	<div class="mainContainer">
+		<div class="headerHolder">
+			<!-- <div class="counts">0c 0w</div> -->
+			<div class="counts"><span class="CharCount">0c</span><span class="WordCount">0w</span></div>
+			<div class="buttonHolder">
+				<div id="switchmode" class="header_buttons">switch mode</div>
+				<div id="copytext" class="header_buttons">copy</div>
+			</div>
+		</div>
+		<div id="notepad" contenteditable="true" class="modeChanger notepadMain"></div>
+	</div>
+</body>
+</html>
