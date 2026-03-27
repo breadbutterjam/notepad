@@ -4,15 +4,11 @@
 	<title>Notepad</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <script type="text/javascript" src="jQuery.js"></script> -->
-	<script type="text/javascript" src="notepad.js"></script>
+	<script type="text/javascript" src="notepad2.js"></script>
 	<style>
 		body{
 			margin: 0px;
 		}
-
-        .handCursor{
-            cursor: pointer;
-        }
 
 		.darkMode{
 			background-color:black;
@@ -26,14 +22,9 @@
 			float: left;
 		}
 
-		.flx{
-			display: flex;
-		}
-
 		.buttonHolder{
 			display: flex;
 			float: right;
-			
 			/* flex-direction: row-reverse; */
 		}
 
@@ -67,7 +58,6 @@
 		.header_buttons{
 			padding-left: 10px;
 			text-decoration: underline;
-            cursor: pointer;
 			/* padding-right: 10px; */
 		}
 		.CharCount
@@ -75,16 +65,10 @@
 			padding-right: 8px;
 		}
 
-        /* .zenmodeadded{ */
-            /* max-width: 500px; */
-            /* margin: auto; */
-
-        /* } */
-
-		.blankOutline{
-			outline: none;
-			border: transparent !important;
-		}
+        .zenmodeadded{
+            max-width: 500px;
+            margin: auto;
+        }
 
         #notepad.nocursor.darkMode{
             text-shadow: 0px 0px 0px #fff;
@@ -103,50 +87,27 @@
 			color: blue;
 		}
  */
-		.footerFontStyling{
-			font-size: 0.7em;
-			margin-top: 0.2em;
-			margin-bottom: 0.2em;
-			padding-right: 2em;
-			font-family: monospace;
-		}
-		.headerHolder,.footer
-		{
-			color: lightgrey;
-			justify-content: space-between;
-		}
-
+		.headerHolder
+		{color: lightgrey;}
     </style>
 </head>
 <body onload="onBodyLoad()" class="modeChanger">
 <!-- <body> -->
 	<div class="mainContainer">
-		<div class="headerHolder flx">
-			<!-- <div class="counts">0c 0w</div> -->
-			
-			<div class="flx">
-				<div class="counts"><span class="CharCount">0c</span><span class="WordCount">0w</span></div>
-			</div>	
-			
-			<div class="buttonHolder flx">
-			
-				<div style="padding-right: 20px;"><input id="cbCursorLessTyping" type="checkbox"><label for="cbCursorLessTyping">ghost cursor</label></div>
-				<div id="save" class="header_buttons">save</div>
-				<div id="clear" class="header_buttons">clear</div>
-				<div id="load" class="header_buttons">load</div>
+        <select>
+            <option>If - Rudyard Kipling</option>
+        </select>
+		<!--<div class="headerHolder">
+			<!-- <div class="counts">0c 0w</div> 
+			<div class="counts"><span class="CharCount">0c</span><span class="WordCount">0w</span></div>
+			<div class="buttonHolder">
+                <div style="padding-right: 20px;"><input id="cbCursorLessTyping" type="checkbox"><label for="cbCursorLessTyping">ghost cursor</label></div>
 				<div id="switchmode" class="header_buttons">switch mode</div>
 				<div id="copytext" class="header_buttons">copy</div>
-				<div id="zenmode" class="header_buttons">zen mode</div>
+                <div id="zenmode" class="header_buttons">zen mode</div>
 			</div>
-			
-			
-		</div>
+		</div>-->
 		<div id="notepad" contenteditable="true" class="modeChanger notepadMain"></div>
-		<div class="footer flx">
-			<div class="footerFontStyling autosaveToggle">turn autosave ON</div>
-			<div class="footerFontStyling flx">last saved at<span id="last_saved_count"></span></div>
-		</div>
 	</div>
-	
 </body>
 </html>
